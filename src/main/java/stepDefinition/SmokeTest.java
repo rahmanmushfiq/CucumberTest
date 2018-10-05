@@ -12,11 +12,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SmokeTest {
 
-    static WebDriver driver;
-    WebElement element;
+    private static WebDriver driver;
 
     @Given("^Setup \"([^\"]*)\" browser$")
-    public void setup_browser(String browser) throws Exception {
+    public void setup_browser(String browser) {
         if (browser.equalsIgnoreCase("Chrome")) {
             String projectPath = System.getProperty("user.dir");
             String chromeDriverPath = projectPath + "/drivers/chromedriver";
